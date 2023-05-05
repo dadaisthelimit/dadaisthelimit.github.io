@@ -23,4 +23,9 @@ $(document).ready(function () {
       $(".navbar-collapse").slideToggle(200);
     });
   });
+
+document.getElementById("submit-btn").addEventListener("click", function(event){
+    event.preventDefault();
+    alert("Thank you for your message, we'll get back to you withing 24 hours!");
+  });
   
