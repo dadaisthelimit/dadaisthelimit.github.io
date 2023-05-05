@@ -37,3 +37,7 @@
     }
   }
   
+  @media only screen and (max-width: 768px) {
+    .box {
+      animation-duration: 0.5s;
+    }
