@@ -9,13 +9,17 @@
       <!-- Custom CSS file -->
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">     
-      <script src="trigger.js"></script>     
-      <!-- Include jQuery library -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <!-- Include Bootstrap JS -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+      
+
   </head>
   <body>    
+    <script src="trigger.js"></script>     
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container">
@@ -190,7 +194,7 @@
           <h2 class="mb-5 text-center">Contact Me</h2>
           <div class="row">
             <div class="col-md-8 mx-auto">
-              <form>
+              <form id="myForm" action="submit-form.php" method="POST">
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" class="form-control" id="name">
@@ -203,8 +207,8 @@
                   <label for="message">Message</label>
                   <textarea class="form-control" id="message" rows="5"></textarea>
                 </div>
-                <button id="submit-btn" type="submit" class="btn btn-dark-green btn-lg border border-dark">Submit</button>
-              </form>
+                <button id="submit-btn" type="submit" class="btn btn-dark-green btn-lg border border-dark" onclick="return confirmSubmit(event)">Submit</button>
+              </form>              
             </div>
           </div>
         </div>
