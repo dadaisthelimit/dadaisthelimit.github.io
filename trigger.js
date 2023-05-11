@@ -23,25 +23,17 @@ $(document).ready(function() {
   $(".navbar-toggler").click(function() {
     $(".navbar-collapse").slideToggle(200);
   });
-  
+}
   // Add submit button function
-  function confirmSubmit(event) {
-    event.preventDefault(); // prevent the default form submission behavior
-    
-    var confirmation = confirm("Are you sure you want to submit the form?");
-    if (confirmation) {
-      // submit the form
-      document.getElementById("myForm").submit();
-      
-      // reset the form
-      document.getElementById("myForm").reset();
-      
-      // display a success message
-      alert("Form submitted successfully!");
-      
-      // return to the top of the page
-      window.scrollTo(0, 0);
-    }
-    return confirmation;
-  }
-});
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const yourName = document.getElementById('name').value;
+    const yourEmail = document.getElementById('email').value;
+    console.log(yourName);
+    console.log(yourEmail);
+  });
+
+
+  

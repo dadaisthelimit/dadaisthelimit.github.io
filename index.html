@@ -19,6 +19,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Include Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="trigger.js"></script>
+    
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
@@ -190,29 +193,29 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-5 vh-100">
-        <div class="container">
-          <h2 class="mb-5 text-center">Contact Me</h2>
-          <div class="row">
-            <div class="col-md-8 mx-auto">
-              <form id="myForm" action="submit-form.php" method="POST">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea class="form-control" id="message" rows="5"></textarea>
-                </div>
-                <button id="submit-btn" type="submit" class="btn btn-dark-green btn-lg border border-dark" onclick="return confirmSubmit(event)">Submit</button>
-              </form>              
-            </div>
+      <div class="container">
+        <h2 class="mb-5 text-center">Contact Me</h2>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <form id="contact-form" action="submit-form.php" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" class="form-control" required> 
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input id="email" type="email" class="form-control" placeholder="Enter your email address" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              <button id="submit-btn" type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </form>              
           </div>
         </div>
-    </section>    
+      </div>
+    </section>   
   </body>
     <footer class="py-4" id="footer">
         <div class="container d-flex justify-content-center align-items-center">
